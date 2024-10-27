@@ -24,8 +24,5 @@
         "src": "/(.*)",
         "dest": "restproject/wsgi.py"
       }
-    ],
-    "rewrites": [
-        { "source": "/(.*)", "destination": "/" }
     ]
   }
