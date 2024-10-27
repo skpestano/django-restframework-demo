@@ -22,3 +22,8 @@ def product_item(request,product_id):
         item = Products.objects.get(id=product_id)
         serializer = ProductSerializer(item)
         return JsonResponse(serializer.data)
+    
+def product_list(request):
+    products = Products.objects.all()
+    context = {'products' : products}
+    return render(request, 'products/productList.html', context)
